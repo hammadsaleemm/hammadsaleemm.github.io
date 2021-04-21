@@ -1,0 +1,36 @@
+baseurl = "https://hammadsaleemm.github.io"
+publishdir = "docs"
+title = "OS-SITE"
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+[Author]
+  name = "Hammad Saleem"
+  bio = " This is Hammad Saleem. Currently, I am studying BSCS in NUST, Islamabad."
+  avatar = "img/Picture.jpg"
+
+[Params]
+  description = "CODE DescriptionWILL GO HERE." # Description of your site
+  opengraph = true
+  twitter_cards = false
+  readmore = false # Show "Read more" button in list if true
+  authorbox = true
+  pager = true
+  post_meta = ["date", "categories"] # Order of post meta information
+
+[Params.logo]
+  subtitle = "Site by Hammad Saleem" # Logo subtitle
+ 
+[Params.sidebar]
+  home = "right"  
+  list = "right"   
+  single = "right" 
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)

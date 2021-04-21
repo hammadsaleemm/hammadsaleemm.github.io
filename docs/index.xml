@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS-SITE</title>
+    <link>https://hammadsaleemm.github.io/</link>
+    <description>Recent content on OS-SITE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Apr 2021 19:34:48 +0500</lastBuildDate><atom:link href="https://hammadsaleemm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logo Print Summary</title>
+      <link>https://hammadsaleemm.github.io/post/my-second-video-post/</link>
+      <pubDate>Tue, 20 Apr 2021 19:34:48 +0500</pubDate>
+      
+      <guid>https://hammadsaleemm.github.io/post/my-second-video-post/</guid>
+      <description>Explanation: Most of the files remain same as they were in the previos task. But for this we used C language to print &amp;ldquo;NUST&amp;rdquo; USING &amp;quot; * &amp;quot; on the screen.
+First we built the stack. It is useful because it return the data every time function completes and also returns the control. We reserved 16kb of memeory for the stack. ESP regster is used as stack pointer to give the address.</description>
+    </item>
+    
+    <item>
+      <title>Ok-Print and building OS Summary</title>
+      <link>https://hammadsaleemm.github.io/post/my-first-post/</link>
+      <pubDate>Tue, 20 Apr 2021 19:34:48 +0500</pubDate>
+      
+      <guid>https://hammadsaleemm.github.io/post/my-first-post/</guid>
+      <description>Software Used: QEMU, DOCKER, VISUAL STUDIO CODE, HUGO,
+Explanation: First I downloaded docker and set up the required files on the visual studio code. First to print Ok on screen we used some packages using RUN commmand. I used NASM to compile our assembly code. To get the final file I used grub package.
+In the src folder we contained our two files header.asm and main.asm. We used two label for start and end of header.</description>
+    </item>
+    
+  </channel>
+</rss>

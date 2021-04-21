@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ok-Print and building OS Summary - OS-SITE</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Ok-Print and building OS Summary" />
+<meta property="og:description" content="Software Used: QEMU, DOCKER, VISUAL STUDIO CODE, HUGO,
+Explanation: First I downloaded docker and set up the required files on the visual studio code. First to print Ok on screen we used some packages using RUN commmand. I used NASM to compile our assembly code. To get the final file I used grub package.
+In the src folder we contained our two files header.asm and main.asm. We used two label for start and end of header." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hammadsaleemm.github.io/post/my-first-post/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-04-20T19:34:48&#43;05:00" />
+<meta property="article:modified_time" content="2021-04-20T19:34:48&#43;05:00" />
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="OS-SITE" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">OS-SITE</div>
+					<div class="logo__tagline">Site by Hammad Saleem</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Ok-Print and building OS Summary</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-20T19:34:48&#43;05:00">April 20, 2021</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h2 id="software-used">Software Used:</h2>
+<p>QEMU, DOCKER, VISUAL STUDIO CODE, HUGO,</p>
+<h2 id="explanation">Explanation:</h2>
+<p>First I downloaded docker and set up the required files on the visual studio code. First to print Ok on screen we used some packages using RUN commmand. I used NASM to compile our assembly code. To get the final file I used grub package.</p>
+<p>In the src folder we contained our two files header.asm and main.asm. We used two label for start and end of header. Here we added magic number and length. We named it as section which helped us in the final stage of linking. We added two dw&rsquo;s and dd at the end set to zero to show that we dont have any more data.</p>
+<p>Main.asm file is acting as a entry file with start as entry point. In start label we printed OK. mov in it is used to move the data that is &lsquo;ok&rsquo;.</p>
+<p>hlt is used to freeze the cpu.</p>
+<p>Linker.ld is used to link all the files. Entry is used as entrypoint named as start. We then defined each section individually. Boot folder is used to keep the multiboot header we defined in header.asm</p>
+<p>grub.cfg is used to get the iso file because in most cases if you want to put your os in USB you need iso file.</p>
+<p>Makefile is used to handle your file and ensured only build can be rebuild and no other than these.</p>
+<p>Then we used some commands to move to the root and then we used make to form kernal file.</p>
+<p>To print Ok we then needed qemu which we downloaded and after running its command we succeded in creating our own OS.</p>
+<h2 id="output">OUTPUT:</h2>
+<p><img src="/images/OK.PNG" alt="OK"></p>
+
+		</div>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Hammad Saleem avatar" src="/img/Picture.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Hammad Saleem</span>
+	</div>
+	<div class="authorbox__description">
+		This is Hammad Saleem. Currently, I am studying BSCS in NUST, Islamabad.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/post/my-second-video-post/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Logo Print Summary</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://hammadsaleemm.github.io" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/my-second-video-post/">Logo Print Summary</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/my-first-post/">Ok-Print and building OS Summary</a></li>
+		</ul>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 OS-SITE.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

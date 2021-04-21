@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Logo Print Summary - OS-SITE</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Logo Print Summary" />
+<meta property="og:description" content="Explanation: Most of the files remain same as they were in the previos task. But for this we used C language to print &ldquo;NUST&rdquo; USING &quot; * &quot; on the screen.
+First we built the stack. It is useful because it return the data every time function completes and also returns the control. We reserved 16kb of memeory for the stack. ESP regster is used as stack pointer to give the address." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hammadsaleemm.github.io/post/my-second-video-post/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-04-20T19:34:48&#43;05:00" />
+<meta property="article:modified_time" content="2021-04-20T19:34:48&#43;05:00" />
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="OS-SITE" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">OS-SITE</div>
+					<div class="logo__tagline">Site by Hammad Saleem</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Logo Print Summary</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-04-20T19:34:48&#43;05:00">April 20, 2021</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h2 id="explanation">Explanation:</h2>
+<p>Most of the files remain same as they were in the previos task. But for this we used C language to print &ldquo;NUST&rdquo; USING &quot; * &quot; on the screen.</p>
+<p>First we built the stack. It is useful because it return the data every time function completes and also returns the control. We reserved 16kb of memeory for the stack. ESP regster is used as stack pointer to give the address. To switch to 64 bit we used Long mode for which the code is written in the file.</p>
+<p>Then we checked for multiboot, cpu-id,long-mode and error code. Linking btw virtual and physical address helped us to remove the memory loset issue. This process is known as paging in which we added page-tables in the previous main file.</p>
+<p>Then, we added another file in src known as main64.asm ehich now contain 64 bits instead of 32 bits. We started long-mode labels. In these labels we passed 0 to all data registers so that they can function properly now.</p>
+<p>After all these setups, I started writing the C code to print NUST on the screen. We built main.c file and kernel-main fnction is given the link in main6r also.</p>
+<p>In Kernel we have three  functions:
+Printclear to clear the screen.
+Setcolor to set background and front color.
+PrintStr to write some characters or text.</p>
+<p>In print.h, we defined our printing interface.</p>
+<p>We make print.c implementing file which implements print.h also. char struct is used to hold the character on the memory device. Buffer is simply refernce to the video memory. We added two varibale rows and coloumns to keep track of rows and coloumns during printing and color for back and front color.</p>
+<p>In print clear, we looped from 0 to  the total number of rows and then called clearrow for each row to print empty character. Same for colomnclear,too.</p>
+<p>In printchar, we print character but first we defined check whther it is newline or not. If it is newline character the newline function calls on which works on moving to the next line by checking if it is not a new line.</p>
+<p>After all this setting, I updated makefile to get the c commmands and succeded in printing the NUST onto the screen.</p>
+<h2 id="output">OUTPUT:</h2>
+<p><img src="/images/NUST.PNG" alt="NUST"></p>
+
+		</div>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Hammad Saleem avatar" src="/img/Picture.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Hammad Saleem</span>
+	</div>
+	<div class="authorbox__description">
+		This is Hammad Saleem. Currently, I am studying BSCS in NUST, Islamabad.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/post/my-first-post/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Ok-Print and building OS Summary</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://hammadsaleemm.github.io" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/my-second-video-post/">Logo Print Summary</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/my-first-post/">Ok-Print and building OS Summary</a></li>
+		</ul>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 OS-SITE.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
